@@ -1,0 +1,18 @@
+# Not working. Ignoring more than intended:
+#  git add src/ie/dit/carl/*.java -f (ignored without the -f)
+#  git add war/\*.* (should include subfolders, only adding war/index.html)
+# git add war/WEB-INF/web.xml -f (ignored without the -f)
+
+# exclude top level files (need to add .gitignore individually until other issues sorted)
+# *.*
+# but include .gitignore
+# !*.gitignore
+
+# exclude src except source code
+src/*
+!src/ie/*.*
+
+# exclude war except 2 files
+war/*
+!war/index.html
+!war/WEB-INF/web.xml
